@@ -1,9 +1,20 @@
 spring:
   datasource:
-    url: jdbc:h2:tcp://localhost/~/account-service
+    url: jdbc:h2:mem:testdb
     username: sa
     password: '{cipher}AQAF8EvAofhfB3H2FHkkg1Uuy/XgnZuze72tD8HwA6Ql4n6KCDNe0izJcZP6ICpMIOfcIRyipuM0ytV7l/0PQErL8od8UVytpN/hu9AD6bXRoIb753XjA95mvqL6MTvCNaKohFpJh0VGOLEyOvZ6zbPxAJUg3pd+8UYqoSGzmcZx50CkquPzYIsnp7yU2I2+WRO5P33m0751AhfrZj4GFgbzrorQkn/ENftYSHOBzlDTR4FbIvWPukBPfg9n5471KyRrFrjEXnldsAfqOQpmYYPNaLDB/v/b+6CBIAqCXr+nVo06kZ8jbzBlD7/PvJXfJe/HfqHh3LYsmr+vVCb9yynlxSVx97kKusO1MAsoMsxbTi2lCBb/Sd9hdXmUqqYsb94='
     driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        format_sql: true
+        use_sql_comments: false
+        default_batch_fetch_size: 100
+    open-in-view: false
 
   rabbitmq:
     host: localhost
