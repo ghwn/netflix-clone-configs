@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/netflix
+    url: jdbc:mysql://localhost:3306/account_service
     username: root
     password: password
     initialization-mode: always

@@ -1,4 +1,10 @@
 spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/api_gateway_service
+    username: root
+    password: password
+
   rabbitmq:
     host: localhost
     port: 5672
